@@ -9,15 +9,64 @@
 </head>
 
 <body>
-    <div class="demo">
-    <div class="image">
-        <img src="C:\Users\User\Downloads\PROJECTS\Bootcamp\HTML\Basic\images\download.jpg" alt="asemahle"> width=50 height=40> <id="profile">
-        <div>
-            <h1>asemahle</h1>
-            <div>
-            
-                <form action=""></form>
-
-    
-</body>
-</html>
+    <head>
+        <style>
+            .wrapper {
+                display: flex
+            }
+      
+            .triangle1 {
+                height: 100px;
+                width: 90px;
+                border: 10px solid green;
+                border-radius: 100px;
+                position: relative;
+            }
+      
+            .triangle2 {
+                height: 50px;
+                width: 50px;
+                border: 10px solid green;
+                border-radius: 200px;
+                position: relative;
+            }
+      
+            .triangle1:after {
+                content: "";
+                position: absolute;
+                border-top: 100px solid transparent;
+                border-left: 140px solid white;
+                left: -50px;
+                top: -35px;
+            }
+      
+            .triangle2:after {
+                content: "";
+                position: absolute;
+                border-top: 50px solid transparent;
+                border-right: 140px solid white;
+                right: -50px;
+                top: -35px;
+            }
+      
+            .triangle1:before {
+                content: "";
+                height: 20px;
+                width: 34px;
+                position: absolute;
+                background: green;
+                left: -18px;
+                top: 45px;
+                z-index: 1;
+            }
+        </style>
+    </head>
+      
+    <body>
+        <div class="wrapper">
+            <div class="triangle1"></div>
+            <div class="triangle2"></div>
+        </div>
+    </body>
+      
+    </html>
